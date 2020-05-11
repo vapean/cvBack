@@ -1,8 +1,18 @@
-GET http://localhost:3000/
 
+
+GET http://localhost:3000/api/proyectos 
 ###
-GET http://localhost:3000/api/proyectos
+POST http://localhost:3000/api/proyectos
+Content-Type: application/json
+
+{
+    "titulo": "proyecto de borrado",
+    "descripcion": "esta es la descripción",
+    "url": "http://www.google.es",
+    "cliente": "google",
+    "urlClient": "http://www.google.es"
+}
 ###
-
-GET http://localhost:3000/otra
-
+PUT http://localhost:3000/api/proyectos
+###
+DELETE http://localhost:3000/api/proyectos/5eb9a376977d037fd058292f

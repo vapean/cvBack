@@ -8,9 +8,15 @@ require('./db');
 //     res.send('hola servidor bonico!!')
 // });
 
-const apiRouter = require('./routes/api')
+const apiRouter = require('./routes/api');
+// app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded())
 
-app.use('/api', apiRouter)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
+app.use('/api', apiRouter);
 
 const PORT = process.env.PORT || 3333
 app.listen(PORT, () => {
